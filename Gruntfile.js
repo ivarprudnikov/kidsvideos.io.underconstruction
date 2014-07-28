@@ -150,28 +150,6 @@ module.exports = function (grunt) {
       server : '.tmp'
     },
 
-    // code quality checks
-    ///////////////////////////////////////
-    jshint : {
-      options : {
-        jshintrc : '.jshintrc'
-      },
-      all : [
-        'Gruntfile.js',
-        '<%= yeoman.app %>/**/*.js'
-      ]
-    },
-
-    jscs : {
-      options : {
-        config : '.jscsrc'
-      },
-      all : [
-        'Gruntfile.js',
-        '<%= yeoman.app %>/**/*.js'
-      ]
-    },
-
     // not used since Uglify task does concat,
     // but still available if needed
     /*concat: {
@@ -290,44 +268,6 @@ module.exports = function (grunt) {
       }
     },
 
-    // convert js links from local to cdn
-    ///////////////////////////////////////
-    cdnify : {
-      dist : {
-        html : ['<%= yeoman.dist %>/{,**/}*.html']
-      }
-    },
-
-    // angular pre-minificator
-    ///////////////////////////////////////
-    ngmin : {
-      dist : {
-        files : [
-          {
-            expand : true,
-            cwd : '<%= yeoman.dist %>',
-            src : '**/app.js',
-            dest : '<%= yeoman.dist %>'
-          }
-        ]
-      }
-    },
-
-    // uglify js files
-    ///////////////////////////////////////
-    uglify : {
-      dist : {
-        files : [
-          {
-            expand : true,
-            cwd : '<%= yeoman.dist %>',
-            src : '**/*.js',
-            dest : '<%= yeoman.dist %>'
-          }
-        ]
-      }
-    },
-
     // Put files not handled in other tasks here
     copy : {
       dist : {
@@ -360,14 +300,6 @@ module.exports = function (grunt) {
         dest : '.tmp',
         src : '**/*.css'
       }
-    },
-
-    // concurrent tasks
-    ///////////////////////////////////////////////
-    concurrent : {
-      server : [],
-      test : [],
-      dist : []
     }
 
   });
@@ -389,8 +321,6 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('build', [
-    'jshint',           // code quality check
-    'jscs',             // code quality check
     'clean:dist',       // cleans .tmp & dist
     'less',             // generates css in dev
     'autoprefixer',     // adds prefixes in dev
@@ -401,8 +331,6 @@ module.exports = function (grunt) {
     'svgmin',           // minifies svg and moves them to dist
     'htmlmin',          // minifies html and moves them to dist
     'copy:dist',        // copies previously unhandled files to dist
-    'ngmin',            // pre-minifies angular files in dist
-    'uglify',           // minifies & uglifies js files in dist
     'filerev',          // hashes js/css/img/font files in dist
     'usemin'
   ]);

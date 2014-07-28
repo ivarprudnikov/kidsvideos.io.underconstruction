@@ -1,38 +1,37 @@
 {
-  "name": "kidsvideos.io.underconstruction",
-  "version": "1.0.0",
-  "engines": {
-    "node": ">=1.0",
-    "npm": "1.2.x"
+  "name" : "kidsvideos.io.underconstruction",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/ivarprudnikov/kidsvideos.io.underconstruction"
   },
-  "scripts": {
-    "start": "grunt server"
+  "private": true,
+  "version" : "1.0.0",
+  "engines" : {
+    "node" : ">=1.0",
+    "npm" : "1.2.x"
   },
-  "dependencies": {},
-  "devDependencies": {
-    "grunt": "*",
-    "grunt-google-cdn": "*",
-    "grunt-contrib-less": "*",
-    "grunt-contrib-copy": "*",
-    "grunt-contrib-concat": "*",
-    "grunt-contrib-uglify": "*",
-    "grunt-contrib-jshint": "*",
-    "grunt-jscs-checker": "*",
-    "grunt-contrib-cssmin": "*",
-    "grunt-contrib-connect": "*",
-    "grunt-contrib-clean": "*",
-    "grunt-contrib-htmlmin": "*",
-    "grunt-contrib-imagemin": "*",
-    "grunt-ngmin": "*",
-    "grunt-contrib-watch": "*",
-    "grunt-autoprefixer": "*",
-    "grunt-usemin": "git+https://git@github.com/ivarprudnikov/grunt-usemin.git",
-    "grunt-svgmin": "*",
-    "grunt-filerev": "*",
-    "grunt-open": "*",
-    "grunt-concurrent": "*",
-    "load-grunt-tasks": "*",
-    "connect-livereload": "*",
-    "time-grunt": "*"
+  "scripts" : {
+    "start" : "grunt server"
+  },
+  "dependencies" : {},
+  "devDependencies" : {
+    "grunt" : "*",
+    "grunt-contrib-less" : "*",
+    "grunt-contrib-copy" : "*",
+    "grunt-contrib-concat" : "*",
+    "grunt-contrib-cssmin" : "*",
+    "grunt-contrib-connect" : "*",
+    "grunt-contrib-clean" : "*",
+    "grunt-contrib-htmlmin" : "*",
+    "grunt-contrib-imagemin" : "*",
+    "grunt-contrib-watch" : "*",
+    "grunt-autoprefixer" : "*",
+    "grunt-usemin" : "git+https://git@github.com/ivarprudnikov/grunt-usemin.git",
+    "grunt-svgmin" : "*",
+    "grunt-filerev" : "*",
+    "grunt-open" : "*",
+    "load-grunt-tasks" : "*",
+    "connect-livereload" : "*",
+    "time-grunt" : "*"
   }
 }
