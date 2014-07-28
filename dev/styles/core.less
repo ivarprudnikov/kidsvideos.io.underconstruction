@@ -20,8 +20,49 @@
   font-style: normal;
 }
 
+@font-family-sans-serif:  "robotothin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-base:        @font-family-sans-serif;
 
 body {
   background-color: #f9a01b;
   color: #fff;
+}
+
+.divider {
+  display: block;
+  text-align: center;
+
+  & > span {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #FFF;
+    transform: rotate(45deg);
+    margin-left: 3px;
+    margin-right: 3px;
+    border-radius: 2px;
+  }
+}
+
+.main-content .lead {
+  text-align: center;
+  font-size: 2em;
+}
+
+footer {
+
+  text-align: center;
+  margin: 5em auto 5em;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+  }
 }
